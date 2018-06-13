@@ -25,7 +25,7 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.3.14":
+"@types/react@*", "@types/react@^16.3.14", "@types/react@^16.3.16":
   version "16.3.17"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.17.tgz#d59d1a632570b0713946ed9c2949d994773633c5"
   dependencies:
@@ -336,6 +336,10 @@ asynckit@^0.4.0:
 atob@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.1.tgz#ae2d5a729477f289d60dd7f96a6314a22dd6c22a"
+
+autobind-decorator@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/autobind-decorator/-/autobind-decorator-2.1.0.tgz#4451240dbfeff46361c506575a63ed40f0e5bc68"
 
 autoprefixer@7.1.6:
   version "7.1.6"
@@ -5589,6 +5593,18 @@ react-dev-utils@^5.0.1:
     sockjs-client "1.1.4"
     strip-ansi "3.0.1"
     text-table "0.2.0"
+
+react-dnd-html5-backend@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-4.0.4.tgz#d828f8ee5deb5c09c24eaf7a40963bd1e45b5730"
+  dependencies:
+    "@types/lodash" "^4.14.109"
+    "@types/react" "^16.3.16"
+    "@types/shallowequal" "^0.2.2"
+    autobind-decorator "^2.1.0"
+    dnd-core "^4.0.4"
+    lodash "^4.17.10"
+    shallowequal "^1.0.2"
 
 react-dnd@^4.0.4:
   version "4.0.4"
