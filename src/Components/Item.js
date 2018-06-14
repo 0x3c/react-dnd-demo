@@ -5,12 +5,7 @@ import iType from "./iTypes";
 class Item extends Component {
   state = { isHover: false };
   render() {
-    const {
-      item,
-      connectDragSource,
-      connectDragPreview,
-      isDragging
-    } = this.props;
+    const { item, connectDragSource } = this.props;
     const { isHover } = this.state;
 
     return connectDragSource(
@@ -24,8 +19,8 @@ class Item extends Component {
               }
             : { padding: 10 }
         }
-        //   onPointerOver={this.onEnter}
-        //   onPointerLeave={this.onLeave}
+        onPointerOver={this.onEnter}
+        onPointerLeave={this.onLeave}
       >
         {item.name}
       </div>
@@ -45,25 +40,13 @@ class Item extends Component {
 
 const departmentSource = {
   beginDrag(props, monitor, compo) {
-    return {
-      item: props.item,
-      compo: compo
-    };
-  },
-  endDrag(props, monitor, compo) {
-    return {
-      item: props.item,
-      compo: compo,
-      fucker: true
-    };
+    return props.item;
   }
 };
 
 function collect(connect, monitor) {
   return {
-    isDragging: monitor.isDragging(),
-    connectDragSource: connect.dragSource(),
-    connectDragPreview: connect.dragPreview()
+    connectDragSource: connect.dragSource()
   };
 }
 
